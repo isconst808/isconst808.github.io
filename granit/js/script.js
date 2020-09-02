@@ -816,8 +816,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 });
 ;
 var classActive = "active";
-var headerHeight = document.querySelector(".header").offsetHeight;
-var navItemHeight = document.querySelector(".nav__item").offsetHeight;
 var navBlock = document.querySelector(".nav__block");
 var burger = document.querySelector(".burger");
 var menu = document.querySelector(".nav__block");
@@ -829,7 +827,10 @@ burger.addEventListener("click", function () {
 function setup_for_width(mql) {
   if (mql.matches) {
     burger.classList.remove(classActive);
-    menu.classList.remove(classActive);
+    menu.classList.remove(classActive); // Определяем отступ сверху для меню
+
+    var headerHeight = document.querySelector(".header").offsetHeight;
+    var navItemHeight = document.querySelector(".nav__item").offsetHeight;
     var indentTopMenu = headerHeight - navItemHeight / 2;
     navBlock.style.top = "".concat(indentTopMenu, "px");
     navBlock.style.height = "calc(100% - ".concat(indentTopMenu, "px)");
