@@ -426,7 +426,6 @@ h6 {
 
 .page__btn {
   color: #333333;
-  font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.12px;
@@ -435,10 +434,19 @@ h6 {
   line-height: 60px;
   text-align: center;
   border: 1px solid #000000;
+  -webkit-transition: all 0.5s 0s ease;
+  -o-transition: all 0.5s 0s ease;
+  transition: all 0.5s 0s ease;
 }
 
 .page__btn_right {
   margin-left: auto;
+}
+
+.page__btn:hover {
+  border-color: #ff5b97;
+  background-color: #ff5b97;
+  color: #ffffff;
 }
 
 .page__picture {
@@ -565,6 +573,12 @@ h6 {
 
 .gift__col_offset {
   margin-left: 33.3333%;
+}
+
+.gift__block {
+  -webkit-transition: all 0.5s 0s ease;
+  -o-transition: all 0.5s 0s ease;
+  transition: all 0.5s 0s ease;
 }
 
 .gift__block:hover {
@@ -810,13 +824,22 @@ h6 {
   background-color: #f32e3c;
   background-image: -o-linear-gradient(65deg, #e12462 0%, #ff4d87 100%);
   background-image: linear-gradient(25deg, #e12462 0%, #ff4d87 100%);
-  /* Style for "Оставить з" */
   color: #ffffff;
   font-family: "Proxima Nova - Semibold";
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.12px;
+  -webkit-transition: all 0.5s 0s ease;
+  -o-transition: all 0.5s 0s ease;
+  transition: all 0.5s 0s ease;
+}
+
+.form__submit:hover {
+  color: #333333;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid #000000;
 }
 
 .footer {
@@ -891,6 +914,10 @@ h6 {
 
   .page__text {
     font-size: calc(12px + 4 * (100vw / 1920));
+  }
+
+  .page__btn {
+    font-size: calc(10px + 2 * (100vw / 1920));
   }
 
   .info-block {
@@ -1018,6 +1045,10 @@ h6 {
     font-size: calc( 12px + 6.8 * ((100vw - 320px) / 1920));
   }
 
+  .page__btn {
+    font-size: calc( 10px + 3.4 * ((100vw - 320px) / 1920));
+  }
+
   .info-block {
     font-size: calc( 10px + 8.5 * ((100vw - 320px) / 1920));
   }
@@ -1057,7 +1088,6 @@ h6 {
   }
 
   .page__btn {
-    font-size: 10px;
     line-height: 44px;
   }
 }
