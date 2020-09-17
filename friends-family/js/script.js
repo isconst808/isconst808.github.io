@@ -820,8 +820,9 @@ $(document).ready(function () {
     infinite: false,
     nextArrow: ".footer__btn"
   });
-});
-var btnNext = $(".footer__btn");
+}); // Событие при скролле
+
+var BTN_SLIDE_NEXT = $(".footer__btn");
 document.addEventListener("wheel", function (e) {
   switch (e.deltaY) {
     case 100:
@@ -838,24 +839,27 @@ document.addEventListener("wheel", function (e) {
 });
 
 function scrollNext() {
-  btnNext.click();
+  BTN_SLIDE_NEXT.click();
 }
 
 function scrollPrev() {
   $(".slick-prev").click();
-}
+} // Слежка за изменением атрибута кнопки слайдера "далее"
+// Изменять display при достижении последней страницы
 
-var elem = document.querySelector(".footer__btn");
+
 var observer = new MutationObserver(function (mutationRecords) {
   if (JSON.parse(mutationRecords[0].target.ariaDisabled)) {
-    btnNext.css("display", "none");
+    BTN_SLIDE_NEXT.css("display", "none");
   } else {
-    btnNext.css("display", "flex");
+    BTN_SLIDE_NEXT.css("display", "flex");
   }
 });
+var elem = document.querySelector(".footer__btn");
 observer.observe(elem, {
   attributes: true
-});
+}); // Меню бургер
+
 var MENU_BTN = $(".nav__burger"),
     MAIN_MENU = $(".nav__list"),
     CLASS_ACTIVE = "active";
