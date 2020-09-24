@@ -213,68 +213,102 @@
       >
       <div class="detailed-app__row row">
          <div class="detailed-app__col col">
-            <form action="" class="detailed-app__form form">
-               <div class="detailed-app__form-body form__body app-form">
-                  <div class="app-form__row row">
-                     <div class="app-form__col col">
-                        <div class="app-form__field form__field">
-                           <label for="advice-username">Ваше имя:</label>
-                           <input
-                              type="text"
-                              name="username"
-                              id="advice-username"
-                           />
-                        </div>
-                        <div class="app-form__field form__field">
-                           <label for="advice-username">Ваше имя:</label>
-                           <input
-                              type="text"
-                              name="username"
-                              id="advice-username"
-                           />
-                        </div>
-                        <div class="app-form__field form__field">
-                           <label for="advice-username">Ваше имя:</label>
-                           <input
-                              type="text"
-                              name="username"
-                              id="advice-username"
-                           />
+            <form action="" class="app-form">
+               <div class="app-form__row">
+                  <div class="app-form__col">
+                     <div class="app-form__field">
+                        <label for="brand-car">Марка:</label>
+                        <div class="app-form__select-box">
+                           <select
+                              name="brand-car"
+                              id="brand-car"
+                              class="app-form__select"
+                           >
+                              <option value="Выберите марку" disabled selected>
+                                 Выберите марку
+                              </option>
+                              <option value="Brand1">Brand1</option>
+                              <option value="Brand2">Brand2</option>
+                              <option value="Brand3">Brand3</option>
+                           </select>
                         </div>
                      </div>
-                     <div class="app-form__col col">
-                        <div class="app-form__field form__field">
-                           <label for="advice-username">Ваше имя:</label>
-                           <textarea name="" id=""></textarea>
-                        </div>
-                        <div class="app-form__field form__field">
-                           <label for="advice-username">Ваше имя:</label>
-                           <input
-                              type="text"
-                              name="username"
-                              id="advice-username"
-                           />
+                     <div class="app-form__field">
+                        <label for="brand-car">Модель:</label>
+                        <div class="app-form__select-box">
+                           <select
+                              name="modal-car"
+                              id="modal-car"
+                              class="app-form__select"
+                           >
+                              <option value="Выберите модель" disabled selected>
+                                 Выберите модель
+                              </option>
+                              <option value="Modal1">Modal1</option>
+                              <option value="Modal2">Modal2</option>
+                              <option value="Modal3">Modal3</option>
+                           </select>
                         </div>
                      </div>
-                     <div class="app-form__col col">
-                        <div class="app-form__field form__field">
-                           <label for="advice-username">Ваше имя:</label>
-                           <input
-                              type="text"
-                              name="username"
-                              id="advice-username"
-                           />
+                     <div class="app-form__field">
+                        <label for="brand-car">Год выпуска:</label>
+                        <div class="app-form__select-box">
+                           <select
+                              name="modal-car"
+                              id="modal-car"
+                              class="app-form__select"
+                           >
+                              <option value="Выберите год" disabled selected>
+                                 Выберите год
+                              </option>
+                              <option value="Year1">Year1</option>
+                              <option value="Year2">Year2</option>
+                              <option value="Year3">Year3</option>
+                           </select>
                         </div>
-                        <div class="app-form__field form__field">
-                           <label for="advice-username">Ваше имя:</label>
-                           <input
-                              type="text"
-                              name="username"
-                              id="advice-username"
-                           />
-                        </div>
-                        <button type="submit" class="btn">Узнать цену</button>
                      </div>
+                  </div>
+                  <div class="app-form__col">
+                     <div class="app-form__field">
+                        <label for="parts-list">Необходимые детали:</label>
+                        <textarea
+                           name="parts-list"
+                           id="parts-list"
+                           placeholder="Введите"
+                        ></textarea>
+                     </div>
+                     <div class="app-form__field">
+                        <label for="user-name">Ваше имя:</label>
+                        <input
+                           type="text"
+                           name="user-name"
+                           id="user-name"
+                           placeholder="Введите"
+                        />
+                     </div>
+                  </div>
+                  <div class="app-form__col">
+                     <div class="app-form__field">
+                        <label for="user-phone">Ваш телефон:</label>
+                        <input
+                           type="tel"
+                           name="user-phone"
+                           id="user-phone"
+                           placeholder="+7 (___) ___-__-__"
+                        />
+                     </div>
+                     <div class="app-form__field">
+                        <label for="user-email">Ваш e-mail:</label>
+                        <input
+                           type="email"
+                           name="user-email"
+                           id="user-email"
+                           placeholder="Введите"
+                        />
+                     </div>
+                     <button type="submit" class="app-form__btn btn">
+                        Узнать цену
+                     </button>
                   </div>
                </div>
             </form>
@@ -495,26 +529,20 @@
       >
       <div class="advice__row row">
          <div class="advice__col col">
-            <form action="" class="advice__form form">
-               <div class="advice__form-body form__body">
-                  <div class="advice__form-top">
-                     <div class="form__field">
-                        <label for="advice-username">Ваше имя:</label>
-                        <input
-                           type="text"
-                           name="username"
-                           id="advice-username"
-                        />
-                     </div>
-                     <div class="form__field">
-                        <label for="advice-tel">Ваше телефон:</label>
-                        <input type="tel" name="advice-tel" id="advice-tel" />
-                     </div>
+            <form action="" class="advice__form form-advice">
+               <div class="form-advice__form-top">
+                  <div class="form-advice__field">
+                     <label for="advice-username">Ваше имя:</label>
+                     <input type="text" name="username" id="advice-username" />
                   </div>
-                  <button type="submit" class="advice__btn btn">
-                     Заказать консультацию
-                  </button>
+                  <div class="form-advice__field">
+                     <label for="advice-tel">Ваш телефон:</label>
+                     <input type="tel" name="advice-tel" id="advice-tel" />
+                  </div>
                </div>
+               <button type="submit" class="form-advice__btn btn">
+                  Заказать консультацию
+               </button>
             </form>
          </div>
       </div>
@@ -525,7 +553,6 @@
    <div class="contact__map">
       <iframe
          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2253.092833183297!2d37.62528658986133!3d55.61780036898203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab25bfbda3a63%3A0x8cc74fb6605a0a52!2z0JTQvtGA0L7QttC90LDRjyDRg9C7LiwgOCDQutC-0YDQv9GD0YEgMSwg0JzQvtGB0LrQstCwLCAxMTc1NDU!5e0!3m2!1sru!2sru!4v1600764230253!5m2!1sru!2sru"
-         frameborder="0"
          style="border: 0"
          allowfullscreen=""
          aria-hidden="false"
