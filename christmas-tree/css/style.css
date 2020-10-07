@@ -438,11 +438,17 @@ h5.title {
 }
 
 .nav {
+  height: 100%;
+  position: relative;
+  min-height: 41px;
+}
+
+.nav__inner {
   background-color: #3da001;
   padding: 11px 0 12px;
 }
 
-.nav.fixed {
+.nav__inner.fixed {
   position: fixed;
   top: 0;
   left: 0;
