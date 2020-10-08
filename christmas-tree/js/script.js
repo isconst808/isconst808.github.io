@@ -59,4 +59,10 @@ $(document).ready(function () {
       NAV_MENU.removeClass(ACTIVE_CLASS);
     });
   });
+  var LINK_ADDRESS = $("a[data-link=address]");
+  LINK_ADDRESS.click(function (e) {
+    if (!window.matchMedia("(max-width: 768px)").matches) {
+      e.preventDefault();
+    }
+  });
 });
