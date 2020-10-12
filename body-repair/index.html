@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,6 +9,91 @@
 
    <body>
       <div class="wrapper">
+         <section class="modal">
+   <div class="modal__wrapper">
+      <div class="modal__block">
+         <div class="modal__massege modal__content">
+            <h4 class="modal__title">Спасибо за вашу заявку!</h4>
+            <span class="modal__desc"
+               >Мы свяжемся с Вами в ближайшее время!</span
+            >
+         </div>
+         <div class="modal__callback modal__content">
+            <h4 class="modal__title">Заказ обратного звонка</h4>
+            <span class="modal__desc">Заказ обратного звонка</span>
+            <form action="http://example.com/" class="modal__form">
+               <div class="modal__field">
+                  <input type="text" placeholder="Ваше имя" />
+                  <picture>
+                     <source
+                        srcset="./img/icon_form_name.webp"
+                        type="image/webp"
+                     />
+                     <img src="./img/icon_form_name.png" alt="" class="" />
+                  </picture>
+               </div>
+               <div class="modal__field">
+                  <input type="tel" placeholder="Ваш телефон" />
+                  <picture>
+                     <source
+                        srcset="./img/icon_form_tel.webp"
+                        type="image/webp"
+                     />
+                     <img src="./img/icon_form_tel.png" alt="" class="" />
+                  </picture>
+               </div>
+               <button class="modal__btn btn">Отправить заявку</button>
+            </form>
+         </div>
+         <div class="modal__order modal__content">
+            <h4 class="modal__title">Быстрая заявка</h4>
+            <span class="modal__desc"
+               >Оставьте заявку и мы Вам перезвоним!</span
+            >
+            <form action="http://example.com/" class="modal__form">
+               <div class="modal__field">
+                  <input type="text" placeholder="Ваше имя" />
+                  <picture>
+                     <source
+                        srcset="./img/icon_form_name.webp"
+                        type="image/webp"
+                     />
+                     <img src="./img/icon_form_name.png" alt="" class="" />
+                  </picture>
+               </div>
+               <div class="modal__field">
+                  <input type="tel" placeholder="Ваш телефон" />
+                  <picture>
+                     <source
+                        srcset="./img/icon_form_tel.webp"
+                        type="image/webp"
+                     />
+                     <img src="./img/icon_form_tel.png" alt="" class="" />
+                  </picture>
+               </div>
+               <div class="modal__field">
+                  <input type="email" placeholder="Ваша почта" />
+                  <picture>
+                     <source
+                        srcset="./img/icon_form_mail.webp"
+                        type="image/webp"
+                     />
+                     <img src="./img/icon_form_mail.png" alt="" class="" />
+                  </picture>
+               </div>
+               <button class="modal__btn btn">Отправить заявку</button>
+            </form>
+         </div>
+         <button class="modal__btn-close">
+            <picture>
+               <source srcset="./img/icon_form_close.webp" type="image/webp" />
+               <img src="./img/icon_form_close.png" alt="" />
+            </picture>
+         </button>
+      </div>
+   </div>
+</section>
+
          <div class="banner" style="background-image: url(./img/banner.jpg)">
             <header class="header">
    <div class="header__container container">
@@ -213,7 +298,7 @@
       >
       <div class="detailed-app__row row">
          <div class="detailed-app__col col">
-            <form action="" class="app-form">
+            <form action="http://example.com/" class="app-form">
                <div class="app-form__row">
                   <div class="app-form__col">
                      <div class="app-form__field">
@@ -234,7 +319,7 @@
                         </div>
                      </div>
                      <div class="app-form__field">
-                        <label for="brand-car">Модель:</label>
+                        <label for="modal-car">Модель:</label>
                         <div class="app-form__select-box">
                            <select
                               name="modal-car"
@@ -251,11 +336,11 @@
                         </div>
                      </div>
                      <div class="app-form__field">
-                        <label for="brand-car">Год выпуска:</label>
+                        <label for="year-car">Год выпуска:</label>
                         <div class="app-form__select-box">
                            <select
-                              name="modal-car"
-                              id="modal-car"
+                              name="year-car"
+                              id="year-car"
                               class="app-form__select"
                            >
                               <option value="Выберите год" disabled selected>
@@ -529,7 +614,7 @@
       >
       <div class="advice__row row">
          <div class="advice__col col">
-            <form action="" class="advice__form form-advice">
+            <form action="http://example.com/" class="advice__form form-advice">
                <div class="form-advice__form-top">
                   <div class="form-advice__field">
                      <label for="advice-username">Ваше имя:</label>
