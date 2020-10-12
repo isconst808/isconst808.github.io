@@ -3,7 +3,7 @@
 $(document).ready(function () {
   var MENU_BURGER = $(".nav__menu-burger"),
       MENU_BTN_CLOSE = $(".nav__btn-close"),
-      NAV_MENU = $(".nav__menu"),
+      NAV_MENU = $(".nav__menu-body"),
       ACTIVE_CLASS = "active";
   MENU_BURGER.click(function (e) {
     NAV_MENU.addClass(ACTIVE_CLASS);

@@ -1184,12 +1184,6 @@ h5.title {
   }
 
   .nav__menu {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background-color: #3da001;
-    top: -100%;
-    left: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1200,13 +1194,23 @@ h5.title {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 100%;
+  }
+
+  .nav__menu-body {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #3da001;
+    top: -100%;
+    left: 0;
     z-index: 99;
     -webkit-transition: all 0.5s 0s ease;
     -o-transition: all 0.5s 0s ease;
     transition: all 0.5s 0s ease;
   }
 
-  .nav__menu.active {
+  .nav__menu-body.active {
     top: 0;
   }
 
