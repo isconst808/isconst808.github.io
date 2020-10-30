@@ -1836,7 +1836,7 @@ h4.title {
   }
 
   .banner {
-    background-image: none;
+    background-image: none !important;
     background-color: #00a0eb;
   }
 
@@ -1967,7 +1967,7 @@ h4.title {
   }
 
   .promo {
-    background-image: none;
+    background-image: none !important;
     background-color: #00a0eb;
   }
 
