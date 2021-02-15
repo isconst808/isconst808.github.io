@@ -1400,6 +1400,7 @@ button.swiper-pagination-bullet {
   color: #fff;
   padding: 100px 0 99px;
   text-align: center;
+  background-color: #0e0e0e;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3161,6 +3162,11 @@ button.swiper-pagination-bullet {
     width: 80%;
   }
 
+  .about-us {
+    background-image: none !important;
+    background-color: #0e0e0e;
+  }
+
   .about-us__h2 {
     margin-bottom: 30px;
   }
@@ -3226,6 +3232,11 @@ button.swiper-pagination-bullet {
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
+  }
+
+  .application {
+    background-image: none !important;
+    background-color: #0e0e0e;
   }
 
   .application-content {
