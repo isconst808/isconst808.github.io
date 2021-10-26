@@ -1,0 +1,23 @@
+.tabs {
+   &__triggers {
+      display: flex;
+   }
+
+   &__triggers-link {
+      text-align: center;
+      padding: 20px;
+      flex-grow: 1;
+      &.active {
+         background: #eee;
+      }
+   }
+
+   &__content-item {
+      display: none;
+      background: #eee;
+      padding: 20px;
+      &.active {
+         display: block;
+      }
+   }
+}
