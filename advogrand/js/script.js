@@ -2,7 +2,7 @@
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-var tagBody = document.querySelector('body'),
+var tagBody = document.body,
     classActive = 'active',
     classLock = 'lock';
 /**
@@ -4835,10 +4835,40 @@ function removeClassCompara() {
 }
 
 ;
-var btnModal = document.querySelectorAll('[data-btn]'),
-    isModal = document.querySelector('.modal'),
-    btnCloseModal = document.querySelector('.modal__close'),
-    modalsContent = document.querySelectorAll('[data-modal]'); // Показать модальное окно
+var btnModal = document.querySelectorAll("[data-btn]"),
+    isModal = document.querySelector(".modal"),
+    btnCloseModal = document.querySelector(".modal__close"),
+    modalsContent = document.querySelectorAll("[data-modal]");
+var body = document.body;
+var fixBlocks = document.querySelectorAll(".fix-block");
+
+var disableScroll = function disableScroll() {
+  var paddingOffset = window.innerWidth - document.body.offsetWidth + "px";
+  var pagePosition = window.scrollY;
+  fixBlocks.forEach(function (el) {
+    el.style.paddingRight = paddingOffset;
+  });
+  body.style.paddingRight = paddingOffset;
+  body.classList.add("disable-scroll");
+  body.dataset.position = pagePosition;
+  body.style.top = -pagePosition + "px";
+};
+
+var enableScroll = function enableScroll() {
+  var pagePosition = parseInt(document.body.dataset.position, 10);
+  body.style.top = "auto";
+  body.classList.remove("disable-scroll");
+  fixBlocks.forEach(function (el) {
+    el.style.paddingRight = "0px";
+  });
+  body.style.paddingRight = "0px";
+  window.scroll({
+    top: pagePosition,
+    left: 0
+  });
+  body.removeAttribute("data-position");
+}; // Показать модальное окно
+
 
 function showModal() {
   tagBody.classList.add(classLock);
@@ -4847,8 +4877,9 @@ function showModal() {
 
 
 btnModal.forEach(function (item) {
-  item.addEventListener('click', function (e) {
+  item.addEventListener("click", function (e) {
     e.preventDefault();
+    disableScroll();
     var dataset = item.dataset.btn;
     var modalContent = document.querySelector("[data-modal=".concat(dataset, "]"));
     showModal();
@@ -4856,16 +4887,17 @@ btnModal.forEach(function (item) {
   });
 }); // Закрытие модального окна
 
-btnCloseModal.addEventListener('click', function (e) {
+btnCloseModal.addEventListener("click", function (e) {
   closeModal();
 });
-isModal.addEventListener('click', function (e) {
-  if (e.target.classList.contains('modal')) {
+isModal.addEventListener("click", function (e) {
+  if (e.target.classList.contains("modal")) {
     closeModal();
   }
 });
 
 function closeModal() {
+  enableScroll();
   tagBody.classList.remove(classLock);
   isModal.classList.remove(classActive);
   modalsContent.forEach(function (item) {
@@ -4874,10 +4906,10 @@ function closeModal() {
 } // Определить контент модального окна секции услуг
 
 
-var servicesLinks = document.querySelectorAll('.services__link');
+var servicesLinks = document.querySelectorAll(".services__link");
 servicesLinks.forEach(function (item) {
-  item.addEventListener('click', function (e) {
-    var servicesLinkHash = e.target.hash.replace(/#/, '');
+  item.addEventListener("click", function (e) {
+    var servicesLinkHash = e.target.hash.replace(/#/, "");
     var modalServices = document.querySelector("[data-modal=".concat(servicesLinkHash, "]"));
     showModal();
     modalServices.classList.add(classActive);
