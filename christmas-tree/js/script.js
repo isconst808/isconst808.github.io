@@ -1,5 +1,28 @@
 "use strict";
 
+// Скрывать Placeholder при фокусе
+var allInput = document.querySelectorAll("input");
+var allTextarea = document.querySelectorAll("textarea");
+allInput.forEach(function (element) {
+  hiddenPlaceholder(element);
+});
+allTextarea.forEach(function (element) {
+  hiddenPlaceholder(element);
+});
+
+function hiddenPlaceholder(el) {
+  var placeholder = "";
+  el.addEventListener("focus", function (e) {
+    placeholder = e.target.placeholder;
+    e.target.placeholder = "";
+  });
+  el.addEventListener("blur", function (e) {
+    e.target.placeholder = placeholder;
+  });
+} // Скрывать Placeholder при фокусе
+
+
+;
 $(document).ready(function () {
   var MENU_BURGER = $(".nav__menu-burger"),
       MENU_BTN_CLOSE = $(".nav__btn-close"),
