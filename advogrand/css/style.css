@@ -2271,6 +2271,7 @@ button.swiper-pagination-bullet {
 }
 
 .contacts-form__textarea {
+  min-height: 102px;
   margin-bottom: 29px;
   resize: vertical;
 }
@@ -2950,14 +2951,10 @@ button.swiper-pagination-bullet {
     margin-bottom: 60px;
   }
 
-  .services__row {
-    padding-left: 8.33333%;
-  }
-
   .services__col {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 41.66667%;
-            flex: 0 1 41.66667%;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
   }
 
   .about-us__h2 {
@@ -3164,13 +3161,11 @@ button.swiper-pagination-bullet {
   }
 
   .services__row {
-    padding-left: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 
   .services__col {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -3185,7 +3180,7 @@ button.swiper-pagination-bullet {
 
   .services__link {
     margin-left: 0;
-    width: 80%;
+    width: 100%;
   }
 
   .about-us {
@@ -3328,6 +3323,18 @@ button.swiper-pagination-bullet {
 
   .modal-question-form {
     padding: 0 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .services__col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+
+  .services__link {
+    width: 60%;
   }
 }
 
